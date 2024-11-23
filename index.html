@@ -18,6 +18,13 @@
         <!-- ionics cdn -->
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <style>
+            @media(max-width:667px){
+                .main_container{
+                    margin-left:0px !important;
+                }
+            }
+        </style>
     
     </head>
 <body>
@@ -94,57 +101,146 @@
 
 
     <main style="font-family: Arial, sans-serif; margin: 0; padding: 2rem; background: #f9f9f9;">
-        <!-- <section style="background: #007bff; color: white; border-radius: 8px; padding: 2rem; text-align: center;">
-            <img src="img/swapnil.jpg" alt="Swapnil Bade" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 1rem;">
-            <h2 style="margin: 0; font-size: 2rem;">About Me</h2>
-            <p style="margin-top: 1rem; font-size: 1.2rem;">
-                Hello, I am <strong>Swapnil Bade</strong>. I am preparing for the <strong>Police Recruitment Exam</strong>.  
-                This website is a collection of my <strong>study materials, important documents,</strong> and resources to help me on this journey.
-            </p>
-        </section> -->
-                            <div class="container">
-                                <div class="row">
-
-                                    <div class="col-md-8 d-flex align-items-center justify-content-center flex-column bg-light p-4 rounded shadow-lg" style="margin-left:200px">
-                                        <img src="img/swapnil.jpg" alt="Swapnil Bade" class="rounded-circle mb-3" style="width: 150px; height: 150px; object-fit: cover; border: 3px solid #bf9b2e;">
-                                        <p style="font-size: 1.2rem; text-align: center; line-height: 1.5; color: #333;">
-                                            Hello, I am <strong>Swapnil Bade</strong>. I am preparing for the <strong>Police Recruitment Exam(MPSC)</strong>.  
-                                            This website is a collection of my <strong>study materials, important documents,</strong> and resources to help me on this journey.
-                                        </p>
-                                        <a href="#documents" class="btn btn-dark mt-3" style="font-size: 1rem;">View Documents</a>
-                                    </div>
-                                    
-                                </div>
-                
+      
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 d-flex align-items-center justify-content-center flex-column bg-light p-4 rounded shadow-lg main_container">
+                    <img src="img/swapnil.jpg" alt="Swapnil Bade" class="rounded-circle mb-3 swapnil-img">
+                    <p class="animated-text">
+                        Hello, I am <strong>Swapnil Bade</strong>. I am preparing for the <strong>Police Recruitment Exam (MPSC)</strong>.  
+                        This website is a collection of my <strong>study materials, important documents,</strong> and resources to help me on this journey.
+                    </p>
+                    <a href="img/Swapnil Bade.pdf" class="btn btn-dark mt-3 view-docs-btn">View Documents</a>
+                </div>
             </div>
+        </div>
+        
+        <style>
+        /* Container Animation */
+        .main_container {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+        
+        /* Entry Animation Keyframes */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Image Styling and Animation */
+        .swapnil-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 3px solid #bf9b2e;
+            transition: transform 0.5s ease, border-color 0.5s ease;
+        }
+        
+        .swapnil-img:hover {
+            transform: scale(1.1);
+            border-color: #ffd700;
+        }
+        
+        /* Typing Animation for Text */
+        /* Typing Animation for Text */
+        .animated-text {
+            font-size: 1.2rem;
+            text-align: center;
+            line-height: 1.5;
+            color: #333;
+            white-space: normal; /* Change from nowrap to normal */
+            overflow: hidden;
+            border-right: 3px solid #333;
+            animation: typing 4s steps(60, end), blink 0.5s step-end infinite;
+        }
+
+        .main_container {
+            max-width: 100%; /* Ensure it adjusts to screen size */
+            word-wrap: break-word; /* Ensures text breaks properly */
+        }
+        
+
+        
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+        
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+        
+        /* Button Styling and Animation */
+        .view-docs-btn {
+            font-size: 1rem;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .view-docs-btn:hover {
+            background-color: #bf9b2e;
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main_container {
+                margin-left: 0;
+                padding: 2rem 1rem;
+            }
+        
+            .swapnil-img {
+                width: 120px;
+                height: 120px;
+            }
+        
+            .animated-text {
+                font-size: 1rem;
+            }
+        
+            .view-docs-btn {
+                font-size: 0.9rem;
+            }
+        }
+        </style>
+        
         </div>
 
 
         
     
-        <section class="" style="margin-top: 2rem; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-            <h2 style="margin-bottom: 1rem; font-size: 1.8rem; color: #333;">Documents</h2>
-            <ul style="list-style: none; padding: 0; font-size: 1.2rem;">
-                <li style="margin-bottom: 0.5rem;">
-                    📄 <a href="docs/id-proof.pdf" target="_blank" style="text-decoration: none; color: #007bff;">ID Proof</a>
-                </li>
-                <li style="margin-bottom: 0.5rem;">
-                    📄 <a href="docs/resume.pdf" target="_blank" style="text-decoration: none; color: #007bff;">Resume</a>
-                </li>
-                <li style="margin-bottom: 0.5rem;">
-                    📄 <a href="docs/study-plan.pdf" target="_blank" style="text-decoration: none; color: #007bff;">Study Plan</a>
-                </li>
-               
-            </ul>
-        </section>
+       
     
-        <section style="margin-top: 2rem; padding: 2rem; background: #e7f3ff; border-radius: 8px;">
-            <h2 style="margin-bottom: 1rem; font-size: 1.8rem; color: #007bff;">Contact</h2>
+        <section style="margin-top: 2rem; padding: 2rem; background: linear-gradient(90deg, #e7f3ff, #b2dfff); border-radius: 8px; animation: gradientShift 6s infinite;">
+            <h2 style="margin-bottom: 1rem; font-size: 1.8rem; color: #007bff;">Contact Me</h2>
             <p style="margin: 0; font-size: 1.2rem;">
                 Have questions or suggestions? Connect with me at:  
                 <a href="mailto:swapnil@example.com" style="text-decoration: none; color: #007bff;">swapnil@example.com</a>
             </p>
         </section>
+        
+        <style>
+            @keyframes gradientShift {
+                0% { background: linear-gradient(90deg, #e7f3ff, #b2dfff); }
+                50% { background: linear-gradient(90deg, #b2dfff, #d1efff); }
+                100% { background: linear-gradient(90deg, #e7f3ff, #b2dfff); }
+            }
+        </style>
+        
     </main>
     
     <footer style="text-align: center; padding: 1rem; background: #007bff; color: white; margin-top: 2rem;">
